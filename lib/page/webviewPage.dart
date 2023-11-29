@@ -120,6 +120,11 @@ class _WebViewPage extends State<MyApp> {
                   initialUrlRequest: URLRequest(
                     url: Uri.parse('https://www.bankx.co.kr/'),
                   ),
+                  androidOnGeolocationPermissionsShowPrompt:
+                      (InAppWebViewController controller, String origin) async {
+                    return GeolocationPermissionShowPromptResponse(
+                        origin: origin, allow: true, retain: true);
+                  },
                   initialOptions: options);
             }
             if (snapshot.hasError) {
