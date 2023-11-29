@@ -1,12 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myappapple/page/webviewPage.dart';
 
 void handleLocation(BuildContext context) {
   print('페이지 이동');
   // Your logic here
-  Navigator.push(
-      context, MaterialPageRoute(builder: (context) => WebViewPage()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
 }
 
 class MainHomeView extends StatelessWidget {
